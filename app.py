@@ -23,13 +23,7 @@ size = [x / 100 for x in groupedby_speed_limit['Speed_limit'].count().tolist()]
 df['Time'] = pd.to_datetime(df['Time'], errors='coerce')
 grouped_by_time = df.groupby(df['Time'].dt.hour)
 
-app.layout = html.Div(
-[
-	html.Div([
-		html.Div(children=[html.H3('aaaaa',style={'text-align': 'center'})
-		], className="twelve columns"),
-	], className="row")
-])
+app.layout = html.Div([])
 
 if __name__ == '__main__':
     app.run_server(debug=True)
