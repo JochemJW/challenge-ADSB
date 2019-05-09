@@ -8,10 +8,7 @@ import plotly.graph_objs as go
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-df_accidents_2012_to_2014 = pd.read_csv('https://www.dropbox.com/s/nzwwiubqjn19lkl/accidents_2005_to_2007.csv?dl=1',low_memory=False)
-df_accidents_2009_to_2011 = pd.read_csv('https://www.dropbox.com/s/o9vz1aufkdnoowc/accidents_2009_to_2011.csv?dl=1',low_memory=False)
-df_accidents_2005_to_2007 = pd.read_csv('https://www.dropbox.com/s/zxv70rmfrfq5h3k/accidents_2012_to_2014.csv?dl=1',low_memory=False)
-df = pd.concat([df_accidents_2012_to_2014, df_accidents_2009_to_2011, df_accidents_2005_to_2007])
+df = pd.read_csv('https://www.dropbox.com/s/nzwwiubqjn19lkl/accidents_2005_to_2007.csv?dl=1',low_memory=False)
 df2 = pd.read_csv('https://www.dropbox.com/s/n9gm0wu5mmlqcs7/Vehicle_Information.csv?dl=1', encoding='cp1252')
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
